@@ -15,7 +15,18 @@ namespace ClientReg
         public Form1()
         {
             InitializeComponent();
+            panel1.Hide();
+            
+            addItem.Click += AddItem_Click;
+
+
         }
 
+        private void AddItem_Click(object sender, EventArgs e)
+        {
+            panel1.Show();
+            /*var panel = this.Controls.OfType<Panel>().FirstOrDefault(p => p.Name == "panel1");
+            if (panel != default(Panel)) panel.Visible = visible;*/
+        }
     }
 }
