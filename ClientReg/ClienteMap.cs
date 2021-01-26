@@ -11,15 +11,16 @@ namespace ClientReg
     {
         public ClienteMap()
         {
-            Id(t => t.Id);
-            Map(t => t.Nome);
-            Map(t => t.Email);
-            Map(t => t.Telefone);
-            Map(t => t.Logradouro);
-            Map(t => t.Bairro);
-            Map(t => t.Numero);
-            Map(t => t.Complemento);
-            Map(t => t.CEP);
+            Id(t => t.Id, "clie_id").GeneratedBy.Native();
+            Map(t => t.Nome, "clie_nome");
+            Map(t => t.Email, "clie_email");
+            Map(t => t.Telefone, "clie_telefone");
+            Map(t => t.Logradouro, "clie_logradouro");
+            Map(t => t.Bairro, "clie_bairro");
+            Map(t => t.Numero, "clie_numero");
+            Map(t => t.Complemento, "clie_compl");
+            Map(t => t.CEP, "clie_cep");
+            Map(t => t.Status, "clie_status");
             Table("clientes");
         }
     }

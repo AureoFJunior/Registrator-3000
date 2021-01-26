@@ -9,6 +9,9 @@ namespace ClientReg
 {
     public class Repositorio<T> where T : class, new()
     {
+
+        
+        
         public void Inserir(T entidade)
         {
             using (ISession session = NhibernateFactory.openSec())
@@ -75,6 +78,29 @@ namespace ClientReg
                 }
             }
         }
+
+        public void InserirOuAtualizar(T entidade)
+        {
+            using (ISession session = NhibernateFactory.openSec())
+            {
+                using (ITransaction transacao = session.BeginTransaction())
+                {
+                    try
+                    {
+                        session.SaveOrUpdate(entidade);
+                        transacao.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        if (!transacao.WasCommitted)
+                        {
+                            transacao.Rollback();
+                        }
+                        throw new Exception("Erro ao Alterar Cliente : " + ex.Message);
+                    }
+                }
+            }
+        }
         public T RetornarPorId(int Id)
         {
             using (ISession session = NhibernateFactory.openSec())
@@ -88,6 +114,13 @@ namespace ClientReg
             {
                 return (from c in session.Query<T>() select c).ToList();
             }
+        }
+
+        public IQueryable<T> GetQuery()
+        {
+            ISession session = NhibernateFactory.openSec();
+            return session.Query<T>();
+                
         }
     }
 }

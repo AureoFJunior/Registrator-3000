@@ -12,7 +12,7 @@ namespace ClientReg
     class NhibernateFactory
     {
         private static String ConnectionString = "Server=localhost; Port=5432;" +
-            " User Id=postgres; Password=123456; Database=Cadastros";
+            " User Id=postgres; Password=123456; Database=Registrator";
 
         private static ISessionFactory session;
 

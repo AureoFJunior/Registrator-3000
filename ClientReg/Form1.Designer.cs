@@ -29,33 +29,38 @@ namespace ClientReg
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editItem = new System.Windows.Forms.ToolStripMenuItem();
             this.delItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gitItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.mktxtTel = new System.Windows.Forms.MaskedTextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.txtCEP = new System.Windows.Forms.TextBox();
+            this.txtComp = new System.Windows.Forms.TextBox();
+            this.txtNum = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtLogra = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +70,8 @@ namespace ClientReg
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addItem,
             this.editItem,
-            this.delItem});
+            this.delItem,
+            this.gitItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(739, 24);
@@ -75,91 +81,117 @@ namespace ClientReg
             // addItem
             // 
             this.addItem.Name = "addItem";
+            this.addItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.addItem.Size = new System.Drawing.Size(70, 20);
             this.addItem.Text = "&Adicionar";
             // 
             // editItem
             // 
             this.editItem.Name = "editItem";
+            this.editItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.editItem.Size = new System.Drawing.Size(49, 20);
             this.editItem.Text = "&Editar";
             // 
             // delItem
             // 
             this.delItem.Name = "delItem";
+            this.delItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
             this.delItem.Size = new System.Drawing.Size(54, 20);
             this.delItem.Text = "&Excluir";
             // 
+            // gitItem
+            // 
+            this.gitItem.Name = "gitItem";
+            this.gitItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.J)));
+            this.gitItem.Size = new System.Drawing.Size(50, 20);
+            this.gitItem.Text = "&Ajuda";
+            // 
             // btnSave
             // 
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.Location = new System.Drawing.Point(505, 327);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(109, 37);
-            this.btnSave.TabIndex = 1;
+            this.btnSave.Size = new System.Drawing.Size(109, 46);
+            this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Salvar";
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.Location = new System.Drawing.Point(620, 327);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(109, 37);
-            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Size = new System.Drawing.Size(109, 46);
+            this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "Cancelar";
+            this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.maskedTextBox1);
-            this.panel1.Controls.Add(this.textBox9);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.mktxtTel);
+            this.panel1.Controls.Add(this.txtBairro);
+            this.panel1.Controls.Add(this.txtCEP);
+            this.panel1.Controls.Add(this.txtComp);
+            this.panel1.Controls.Add(this.txtNum);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtLogra);
+            this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtNome);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(167, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(562, 294);
             this.panel1.TabIndex = 3;
             // 
-            // textBox9
+            // mktxtTel
             // 
-            this.textBox9.Location = new System.Drawing.Point(101, 188);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(231, 23);
-            this.textBox9.TabIndex = 17;
+            this.mktxtTel.Location = new System.Drawing.Point(102, 102);
+            this.mktxtTel.Mask = "(99) 0000-0000";
+            this.mktxtTel.Name = "mktxtTel";
+            this.mktxtTel.Size = new System.Drawing.Size(124, 23);
+            this.mktxtTel.TabIndex = 3;
             // 
-            // textBox8
+            // txtBairro
             // 
-            this.textBox8.Location = new System.Drawing.Point(99, 250);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(362, 23);
-            this.textBox8.TabIndex = 16;
+            this.txtBairro.Location = new System.Drawing.Point(101, 188);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(231, 23);
+            this.txtBairro.TabIndex = 5;
             // 
-            // textBox5
+            // txtCEP
             // 
-            this.textBox5.Location = new System.Drawing.Point(99, 221);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(362, 23);
-            this.textBox5.TabIndex = 15;
+            this.txtCEP.Location = new System.Drawing.Point(99, 250);
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(362, 23);
+            this.txtCEP.TabIndex = 8;
             // 
-            // textBox6
+            // txtComp
             // 
-            this.textBox6.Location = new System.Drawing.Point(403, 185);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(61, 23);
-            this.textBox6.TabIndex = 14;
+            this.txtComp.Location = new System.Drawing.Point(99, 221);
+            this.txtComp.Name = "txtComp";
+            this.txtComp.Size = new System.Drawing.Size(362, 23);
+            this.txtComp.TabIndex = 7;
+            // 
+            // txtNum
+            // 
+            this.txtNum.Location = new System.Drawing.Point(403, 185);
+            this.txtNum.Name = "txtNum";
+            this.txtNum.Size = new System.Drawing.Size(61, 23);
+            this.txtNum.TabIndex = 6;
             // 
             // label10
             // 
@@ -216,19 +248,19 @@ namespace ClientReg
             this.label5.TabIndex = 7;
             this.label5.Text = "Endereço";
             // 
-            // textBox3
+            // txtLogra
             // 
-            this.textBox3.Location = new System.Drawing.Point(101, 151);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(362, 23);
-            this.textBox3.TabIndex = 6;
+            this.txtLogra.Location = new System.Drawing.Point(101, 151);
+            this.txtLogra.Name = "txtLogra";
+            this.txtLogra.Size = new System.Drawing.Size(362, 23);
+            this.txtLogra.TabIndex = 4;
             // 
-            // textBox2
+            // txtEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(102, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(362, 23);
-            this.textBox2.TabIndex = 5;
+            this.txtEmail.Location = new System.Drawing.Point(102, 66);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(362, 23);
+            this.txtEmail.TabIndex = 2;
             // 
             // label4
             // 
@@ -257,12 +289,12 @@ namespace ClientReg
             this.label2.TabIndex = 2;
             this.label2.Text = "Nome *";
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(362, 23);
-            this.textBox1.TabIndex = 1;
+            this.txtNome.Location = new System.Drawing.Point(102, 29);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(362, 23);
+            this.txtNome.TabIndex = 1;
             // 
             // label1
             // 
@@ -281,40 +313,68 @@ namespace ClientReg
             this.textBox4.Size = new System.Drawing.Size(100, 23);
             this.textBox4.TabIndex = 6;
             // 
-            // listView1
+            // listBox1
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 28);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(161, 336);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 17;
+            this.listBox1.Location = new System.Drawing.Point(0, 28);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(161, 344);
+            this.listBox1.TabIndex = 13;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // maskedTextBox1
+            // label11
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(102, 102);
-            this.maskedTextBox1.Mask = "(99) 0000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(124, 23);
-            this.maskedTextBox1.TabIndex = 18;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(167, 332);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(193, 13);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Campos que contêm o caractere \" * \"";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(167, 347);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(25, 13);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "são";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(188, 346);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 15);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "obrigatórios.";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(739, 376);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Registrator 3000";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -333,26 +393,30 @@ namespace ClientReg
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.TextBox txtCEP;
+        private System.Windows.Forms.TextBox txtComp;
+        private System.Windows.Forms.TextBox txtNum;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtLogra;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mktxtTel;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ToolStripMenuItem gitItem;
+        private System.Windows.Forms.Label label13;
     }
 }
 
