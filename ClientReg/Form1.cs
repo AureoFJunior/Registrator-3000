@@ -161,6 +161,7 @@ namespace ClientReg
             model.Logradouro = txtLogra.Text;
             model.Numero = txtNum.Text;
             model.CEP = txtCEP.Text;
+            txtCEP.MaxLength = 8;
 
 
 

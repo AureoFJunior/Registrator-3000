@@ -35,28 +35,29 @@ namespace ClientReg
             this.editItem = new System.Windows.Forms.ToolStripMenuItem();
             this.delItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gitItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.mktxtTel = new System.Windows.Forms.MaskedTextBox();
-            this.txtBairro = new System.Windows.Forms.TextBox();
-            this.txtCEP = new System.Windows.Forms.TextBox();
-            this.txtComp = new System.Windows.Forms.TextBox();
-            this.txtNum = new System.Windows.Forms.TextBox();
+            this.txtBairro = new ClientReg.Componentes.MyTextbox();
+            this.txtCEP = new ClientReg.Componentes.MyTextbox();
+            this.txtComp = new ClientReg.Componentes.MyTextbox();
+            this.txtNum = new ClientReg.Componentes.MyTextbox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtLogra = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtLogra = new ClientReg.Componentes.MyTextbox();
+            this.txtEmail = new ClientReg.Componentes.MyTextbox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtNome = new ClientReg.Componentes.MyTextbox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -71,7 +72,9 @@ namespace ClientReg
             this.addItem,
             this.editItem,
             this.delItem,
-            this.gitItem});
+            this.gitItem,
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(739, 24);
@@ -105,6 +108,18 @@ namespace ClientReg
             this.gitItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.J)));
             this.gitItem.Size = new System.Drawing.Size(50, 20);
             this.gitItem.Text = "&Ajuda";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(12, 20);
             // 
             // btnSave
             // 
@@ -167,6 +182,7 @@ namespace ClientReg
             // 
             // txtBairro
             // 
+            this.txtBairro.CaracteresValidos = "abcdefghijklmnopqrstuvwxyz0123456789çàèòùáéíóúâêîôûãñõäëïöüÿ";
             this.txtBairro.Location = new System.Drawing.Point(101, 188);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(231, 23);
@@ -174,6 +190,7 @@ namespace ClientReg
             // 
             // txtCEP
             // 
+            this.txtCEP.CaracteresValidos = "abcdefghijklmnopqrstuvwxyz0123456789çàèòùáéíóúâêîôûãñõäëïöüÿ";
             this.txtCEP.Location = new System.Drawing.Point(99, 250);
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(362, 23);
@@ -181,6 +198,7 @@ namespace ClientReg
             // 
             // txtComp
             // 
+            this.txtComp.CaracteresValidos = "abcdefghijklmnopqrstuvwxyz0123456789çàèòùáéíóúâêîôûãñõäëïöüÿ";
             this.txtComp.Location = new System.Drawing.Point(99, 221);
             this.txtComp.Name = "txtComp";
             this.txtComp.Size = new System.Drawing.Size(362, 23);
@@ -188,6 +206,7 @@ namespace ClientReg
             // 
             // txtNum
             // 
+            this.txtNum.CaracteresValidos = "abcdefghijklmnopqrstuvwxyz0123456789çàèòùáéíóúâêîôûãñõäëïöüÿ";
             this.txtNum.Location = new System.Drawing.Point(403, 185);
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(61, 23);
@@ -250,6 +269,7 @@ namespace ClientReg
             // 
             // txtLogra
             // 
+            this.txtLogra.CaracteresValidos = "abcdefghijklmnopqrstuvwxyz0123456789çàèòùáéíóúâêîôûãñõäëïöüÿ";
             this.txtLogra.Location = new System.Drawing.Point(101, 151);
             this.txtLogra.Name = "txtLogra";
             this.txtLogra.Size = new System.Drawing.Size(362, 23);
@@ -257,6 +277,7 @@ namespace ClientReg
             // 
             // txtEmail
             // 
+            this.txtEmail.CaracteresValidos = "abcdefghijklmnopqrstuvwxyz0123456789çàèòùáéíóúâêîôûãñõäëïöüÿ@";
             this.txtEmail.Location = new System.Drawing.Point(102, 66);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(362, 23);
@@ -291,6 +312,7 @@ namespace ClientReg
             // 
             // txtNome
             // 
+            this.txtNome.CaracteresValidos = "abcdefghijklmnopqrstuvwxyz0123456789çàèòùáéíóúâêîôûãñõäëïöüÿ";
             this.txtNome.Location = new System.Drawing.Point(102, 29);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(362, 23);
@@ -305,13 +327,6 @@ namespace ClientReg
             this.label1.Size = new System.Drawing.Size(89, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dados Pessoais";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(239, 144);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 23);
-            this.textBox4.TabIndex = 6;
             // 
             // listBox1
             // 
@@ -393,30 +408,32 @@ namespace ClientReg
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtBairro;
-        private System.Windows.Forms.TextBox txtCEP;
-        private System.Windows.Forms.TextBox txtComp;
-        private System.Windows.Forms.TextBox txtNum;
+        private ClientReg.Componentes.MyTextbox txtBairro;
+        private ClientReg.Componentes.MyTextbox txtCEP;
+        private ClientReg.Componentes.MyTextbox txtComp;
+        private ClientReg.Componentes.MyTextbox txtNum;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtLogra;
-        private System.Windows.Forms.TextBox txtEmail;
+        private ClientReg.Componentes.MyTextbox txtLogra;
+        private ClientReg.Componentes.MyTextbox txtEmail;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNome;
+        private ClientReg.Componentes.MyTextbox txtNome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
+        private ClientReg.Componentes.MyTextbox textBox4;
         private System.Windows.Forms.MaskedTextBox mktxtTel;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ToolStripMenuItem gitItem;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }
 
